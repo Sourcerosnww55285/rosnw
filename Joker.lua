@@ -1711,16 +1711,18 @@ end end
 if text == '/start' and ChCheck(msg) then  
 if not DevAbs:get(rosnw..'Abs:Start:Time'..msg.sender_user_id_) then
 tdcli_function({ID="GetUser",user_id_=DevId},function(arg,dp) 
-local inline = {{{text="الـمـطـور ™",url="t.me/"..(dp.username_ or "rosnw1")}}}
+local inline = {{{text="المطور 🧚.",url="t.me/"..(dp.username_ or "rosnw1")}}}
 local start = DevAbs:get(rosnw.."Abs:Start:Bot")
 if start then 
 Start_Source = start
 else
-Start_Source = "اهلا بك في بوت  "..NameBot.."\اختصاصي حماية مجموعتك 
-لتفعيل البوت اتبع الخطوات
-اضفني لمجموعتك
-ثم ارفعني ادمن 
-ارسل كلمه [ تفعيل ] وسيتم تفعيلي
+Start_Source = "• اهلاً فيك 🧚
+• انا بوت اسمي "..NameBot.." 
+• مختص بحماية المجموعات 
+• اذا تبي تفعلني اضفني لمجموعتك
+• ارفعني ادمن
+• ارسل كلمة (تفعيل) وبتفعل 
+• مطوري الغالي 👇🏻."
 end 
 SendInline(msg.chat_id_,Start_Source,nil,inline)
 end,nil)
