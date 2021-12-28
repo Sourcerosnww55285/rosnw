@@ -1711,19 +1711,20 @@ end end
 if text == '/start' and ChCheck(msg) then  
 if not DevAbs:get(rosnw..'Abs:Start:Time'..msg.sender_user_id_) then
 tdcli_function({ID="GetUser",user_id_=DevId},function(arg,dp) 
-local inline = {{{text="المطور 🧚.",url="t.me/"..(dp.username_ or "rosnw1")}}}
-local start = DevAbs:get(rosnw.."Abs:Start:Bot")
+
+local inline = {{{text="المطور 🧚🏻",url="t.me/"..(dp.username_ or "rwwwr")}}}
+local start = DevAbs:get(JokerTeam.."Abs:Start:Bot")
 if start then 
 Start_Source = start
 else
-Start_Source = Start_Source = "• اهلاً فيك 🧚n\• انا بوت اسمي "..NameBot.."n\• مختص بحماية المجموعاتn\• اذا تبي تفعلني اضفني لمجموعتكn\• ارفعني ادمنn\• ارسل كلمة (تفعيل) وبتفعلn\• مطوري الغالي 👇🏻."
-end up 
+Start_Source = "• هلا فيك 🧚\n• انا بوت اسمي "..NameBot.."\n• مختص بحماية المجموعات\n• اذا تبي تفعلني اضفني لمجموعتك\n• ارفعني ادمن\n• ارسل كلمة (تفعيل) وبتفعل\n• مطور الغالي👇🏻."
+end 
 SendInline(msg.chat_id_,Start_Source,nil,inline)
 end,nil)
 end
-DevAbs:setex(rosnw..'Abs:Start:Time'..msg.sender_user_id_,300,true)
+DevAbs:setex(JokerTeam..'Abs:Start:Time'..msg.sender_user_id_,300,true)
 return false
-end 
+end
 --     Source rosnw     --
 if not SecondSudo(msg) and not DevAbs:sismember(rosnw..'Abs:Ban:Pv',msg.sender_user_id_) and not DevAbs:get(rosnw..'Abs:Texting:Pv') then
 tdcli_function({ID="GetUser",user_id_=DevId},function(arg,chat) 
