@@ -1722,7 +1722,7 @@ end
 SendInline(msg.chat_id_,Start_Source,nil,inline)
 end,nil)
 end
-DevAbs:setex(JokerTeam..'Abs:Start:Time'..msg.sender_user_id_,300,true)
+DevAbs:setex(rosnw..'Abs:Start:Time'..msg.sender_user_id_,300,true)
 return false
 end
 --     Source rosnw     --
