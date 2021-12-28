@@ -1713,7 +1713,7 @@ if not DevAbs:get(rosnw..'Abs:Start:Time'..msg.sender_user_id_) then
 tdcli_function({ID="GetUser",user_id_=DevId},function(arg,dp) 
 
 local inline = {{{text="المطور 🧚🏻",url="t.me/"..(dp.username_ or "rwwwr")}}}
-local start = DevAbs:get(JokerTeam.."Abs:Start:Bot")
+local start = DevAbs:get(rosnw.."Abs:Start:Bot")
 if start then 
 Start_Source = start
 else
